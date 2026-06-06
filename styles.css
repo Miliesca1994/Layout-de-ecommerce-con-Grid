@@ -89,6 +89,20 @@
         border-radius:5px;
     }
 
+    .sidebar{
+    display:flex;
+    flex-direction:column;
+}
+
+.card{
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+button:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+
     /* Footer */
     .footer{
         grid-area:footer;
