@@ -1,1 +1,102 @@
-#
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    /* Layout Principal */
+    .container{
+        display:grid;
+        grid-template-areas:
+            "navbar navbar"
+            "sidebar products"
+            "footer footer";
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 80px auto 60px;
+        min-height:100vh;
+    }
+
+    /* Navegación */
+    .navbar{
+        grid-area:navbar;
+        background:#1f3c88;
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    /* Sidebar */
+    .sidebar{
+        grid-area:sidebar;
+        background:#f4f4f4;
+        padding:20px;
+
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .categoria{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    /* Productos */
+    .products{
+        grid-area:products;
+        padding:20px;
+
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+        gap:20px;
+    }
+
+    /* Tarjetas */
+    .card{
+        border:1px solid #ddd;
+        border-radius:8px;
+        overflow:hidden;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    .card img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
+    }
+
+    .card-body{
+        padding:15px;
+        text-align:center;
+
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .card button{
+        background:#1f3c88;
+        color:white;
+        border:none;
+        padding:10px;
+        cursor:pointer;
+        border-radius:5px;
+    }
+
+    /* Footer */
+    .footer{
+        grid-area:footer;
+        background:#1f3c88;
+        color:white;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
